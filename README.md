@@ -10,7 +10,7 @@ Photos by [Bartek Pawlik](https://bartpawlik.format.com/).
 
 - [Kojo Idrissa on stage, Orientation, DjangoCon US, 2024-09-23](https://www.flickr.com/photos/djangocon/54089577735/in/album-72177720321461933)
 - [Afi, Sarah, Natalia, Velda, DjangoCon US, 2024-09-23](https://www.flickr.com/photos/djangocon/54089576815/in/album-72177720321461933)
-- [Natalia and Sarah, DjangoCOn US, 2024-09-24](https://www.flickr.com/photos/djangocon/54089571350/in/album-72177720321461933)
+- [Natalia and Sarah, DjangoCon US, 2024-09-24](https://www.flickr.com/photos/djangocon/54089571350/in/album-72177720321461933)
 - [Group photo of DjangoCon US 2024 organizers](https://www.flickr.com/photos/djangocon/54089575840/in/album-72177720321461933)
 - [DjangoCon US 2024 attendees group photo](https://www.flickr.com/photos/djangocon/54089368753/in/album-72177720321461933)
 - [John’s DjangoCon US signed tote bag](https://www.flickr.com/photos/djangocon/54088239302/in/album-72177720321461933)
@@ -39,3 +39,10 @@ Photos by [Bartek Pawlik](https://bartpawlik.format.com/).
 - [Django Girls+ decade in review with Anna and Rachel on stage](https://www.flickr.com/photos/djangocon/53799388998/in/album-72177720318008635)
 - [Django Girls origins by Anna and Rachel on stage with audience in the foreground](https://www.flickr.com/photos/djangocon/53799388878/in/album-72177720318008635)
 - [DjangoCon Europe conference room with a talk about htmx in the background](https://www.flickr.com/photos/djangocon/53799484149/in/album-72177720318008635)
+
+## Pre-publication tasks
+
+- Images lazy-load
+- sections anchor links
+- sections aria-labelledby
+- reduced animation

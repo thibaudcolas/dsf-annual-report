@@ -8,6 +8,18 @@
     --blur-*: initial;
   --perspective-*: initial;
   --font-dtl-prokyon: "DTLProkyon", ui-sans-serif;
+  --color-official-green: #092e20;
+  --color-website-text: #0c3c26;
+  --color-website-dark-green: #0c4b33;
+  --color-website-secondary-green: #20aa76;
+  --color-website-light-green: #93d7b7;
+  --color-secondary-lime: #89e7c3;
+  --color-official-white: #ffffff;
+  --color-website-dark-red: #6a0e0e;
+  --color-django-girls-plus-orange: #ff8d02;
+  --color-django-pony-light-pink: #f6bfcd;
+  --color-django-pony-pink: #f18197;
+  --color-django-pony-purple: #642982;
 }
 
 @layer theme {
@@ -18,21 +30,6 @@
     font-display: swap;
     src: url("assets/fonts/dtl-prokyon.woff2") format("woff2");
   }
-
-  :root {
-    --official-green: #092e20;
-    --website-text: #0c3c26;
-    --website-dark-green: #0c4b33;
-    --website-secondary-green: #20aa76;
-    --website-light-green: #93d7b7;
-    --secondary-lime: #89e7c3;
-    --official-white: #ffffff;
-    --website-dark-red: #6a0e0e;
-    --django-girls-plus-orange: #ff8d02;
-    --django-pony-light-pink: #f6bfcd;
-    --django-pony-pink: #f18197;
-    --django-pony-purple: #642982;
-  }
 }
 
 @layer base {
@@ -40,8 +37,8 @@
     --light-dark: color-mix(in oklch, CanvasText 10%, Canvas 80%);
     --dark-light: color-mix(in oklch, Canvas 10%, CanvasText 60%);
     color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
-    --safe-area: 2vmin;
-    font-size: clamp(1rem, calc(1dvmax + 1rem), 4dvmin);
+    --safe-area: 3vmin;
+    font-size: clamp(1rem, calc(0.8dvmax + 1rem), 4dvmin);
   }
 
   main {
@@ -52,6 +49,12 @@
 
   a {
     text-decoration: underline;
+    color: color-mix(in oklch, currentColor 90%, var(--dark-light));
+
+    &:hover {
+      text-decoration: dashed underline;
+      color: currentColor;
+    }
   }
 
   table {
@@ -77,6 +80,7 @@
     font-weight: var(--font-weight-semibold);
     text-wrap: balance;
     font-family: var(--font-dtl-prokyon);
+    margin-bottom: 1em;
   }
 
   h3 {
@@ -84,6 +88,7 @@
     line-height: 1.1;
     font-weight: var(--font-weight-semibold);
     text-wrap: balance;
+    margin-bottom: 1em;
   }
 
   p:has(~ :where(p, ul, ol, pre, blockquote)) {
@@ -102,6 +107,22 @@
   ol {
     list-style: decimal;
     margin-inline-start: 4vmin;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  blockquote {
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0.5em 0.25em;
+    padding-inline-start: 1em;
+    border-inline-start: 0.25em solid currentColor;
+    background-color: color-mix(in oklch, var(--light-dark) 10%, Canvas);
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.25;
   }
 }
 
@@ -150,12 +171,8 @@
       }
     }
 
-    &:has(h1, h2) {
-      --angle-factor: 34 !important;
-
-      > .slide-content {
-        @apply flex justify-center items-center text-center flex-col;
-      }
+    &:has(h2) {
+      --angle-factor: 5 !important;
     }
 
     > .slide-footer {
@@ -186,7 +203,7 @@
       img {
         width: auto;
         max-height: 55vh;
-        aspect-ratio: 16 / 9;
+
       }
 
       &:not(:only-child) {
@@ -194,24 +211,24 @@
       }
     }
 
-    &:nth-child(3n) {
+    &:nth-of-type(3n) {
+      --angle-factor: 6;
+    }
+
+    &:nth-of-type(4n) {
+      --angle-factor: 8;
+    }
+
+    &:nth-of-type(5n) {
       --angle-factor: 10;
     }
 
-    &:nth-child(4n) {
-      --angle-factor: 74;
-    }
-
-    &:nth-child(5n) {
-      --angle-factor: 41;
-    }
-
-    &:nth-child(7n) {
-      --angle-factor: 63;
+    &:nth-of-type(7n) {
+      --angle-factor: 12;
     }
 
     &.slide--cover {
-      color: light-dark(var(--official-green), var(--official-white));
+      color: light-dark(var(--color-official-green), var(--color-official-white));
       background-color: Canvas;
       background-image: radial-gradient(
           55.51% 55.51% at 50% 56.73%,
@@ -285,14 +302,15 @@
       padding: 0;
 
       > div:first-child {
-        max-height: 50vh;
+        padding: var(--safe-area) 4vmin;
       }
 
       div:nth-child(2) {
         padding: var(--safe-area) 4vmin;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
+        max-height: 50vh;
         grid-template-columns: 1fr 1fr;
 
         div:first-child {
@@ -300,7 +318,7 @@
         }
       }
 
-      div > img {
+      img.bg {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -350,15 +368,23 @@
     }
   }
 
+  .bg-stickers {
+    background: linear-gradient(
+          180deg,
+          var(--color-official-green) 20%,
+          color-mix(in oklch, transparent, var(--color-official-green)) 80%
+        ), url("assets/bg/Django_Day_CPH_2024_stickers.jpg");
+  }
+
   /**
- * Polaroid-style pictures, animated on page load to slide down from the top of the page.
- */
+   * Polaroid-style pictures, animated on page load to slide down from the top of the page.
+   */
   .hero-picture {
     --headroom-z-index: 10;
     --transition-duration: 0.3s;
-    --rest-angle: -9deg;
+    --rest-angle: -3deg;
     --slide-start-x: 0%;
-    --slide-start-y: -15%;
+    --slide-start-y: -5%;
     --slide-end-x: 0%;
     --slide-end-y: 0%;
     display: inline-block;
@@ -386,21 +412,18 @@
       border-width: 10px;
     }
 
-    @media (min-width: 960px) {
-      position: absolute;
-    }
-
     @media (prefers-reduced-motion: reduce) {
       animation-iteration-count: 0;
     }
 
     img {
       /* Nicer rendering while images are loading. */
-      background-color: var(--official-green);
+      background-color: var(--color-official-green);
     }
 
     figcaption {
       padding-top: 10px;
+      line-height: 1.1;
       text-align: center;
       font-weight: theme("fontWeight.bold");
       font-family: theme("fontFamily.mono");
@@ -408,7 +431,7 @@
     }
 
     figcaption a {
-      color: var(--official-green);
+      color: var(--color-official-green);
       font-size: min(1rem, 25px);
     }
 
@@ -421,17 +444,17 @@
       z-index: calc(var(--headroom-z-index) + 2);
     }
 
-    &--odd {
+    &.hero-picture--odd {
       --slide-start-x: 0%;
       --slide-start-y: 0%;
       --slide-end-x: 0%;
-      --slide-end-y: 10%;
-      --rest-angle: 6deg;
+      --slide-end-y: 2.5%;
+      --rest-angle: 3deg;
       animation-duration: 0.9s;
 
       @media (min-width: 960px) {
-        --slide-end-x: 30%;
-        --slide-end-y: 60%;
+        --slide-end-x: 2.5%;
+        --slide-end-y: 5%;
       }
     }
   }
