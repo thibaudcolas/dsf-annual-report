@@ -34,8 +34,8 @@
 
 @layer base {
   body {
-    --light-dark: color-mix(in oklch, CanvasText 10%, Canvas 80%);
-    --dark-light: color-mix(in oklch, Canvas 10%, CanvasText 60%);
+    --light-dark: light-dark(color-mix(in oklch, CanvasText 10%, Canvas), color-mix(in oklch, CanvasText 20%, Canvas));
+    --dark-light: light-dark(color-mix(in oklch, Canvas 10%, CanvasText), color-mix(in oklch, Canvas 5%, CanvasText));
     color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
     --safe-area: 3vmin;
     font-size: clamp(1rem, calc(0.65dvmax + 1rem), 3dvmin);
@@ -69,7 +69,7 @@
   }
 
   h1 {
-    font-size: 7dvmin;
+    font-size: 8dvmin;
     font-weight: var(--font-weight-semibold);
     line-height: 1.25;
   }
@@ -82,6 +82,10 @@
     font-family: var(--font-dtl-prokyon);
     margin-top: 1em;
     margin-bottom: 1em;
+
+    .slide--cover & {
+      font-size: 4dvmin;
+    }
   }
 
   h3 {
@@ -143,6 +147,11 @@
     font-size: 1.2em;
     font-style: italic;
     line-height: 1.25;
+
+    @media (forced-colors: active) {
+      border: 2px solid CanvasText;
+      border-inline-start-width: 0.25em;
+    }
   }
 }
 
@@ -154,10 +163,14 @@
     position: relative;
     padding: var(--safe-area) 4vmin;
     --hue: oklch(30% 0.4 calc(230 + calc(5 * var(--angle-factor))));
-    --bg: color-mix(in oklch, var(--light-dark) 5%, var(--hue) 10%);
+    --bg: color-mix(in oklch, var(--light-dark) 90%, var(--hue));
     --bg2: color-mix(in oklch, var(--bg) 90%, var(--light-dark));
     background: var(--bg);
     color: color-mix(in oklch, var(--hue) 50%, var(--dark-light));
+
+    @media (forced-colors: active) {
+      border: 2px solid CanvasText;
+    }
 
     strong mark,
     mark strong {
@@ -188,7 +201,6 @@
     &:has(h2) {
       --angle-factor: 5 !important;
       border-top: 4px solid black;
-      border-bottom: 4px solid black;
     }
 
     > .slide-footer {
@@ -232,15 +244,15 @@
     }
 
     &:nth-of-type(4n) {
-      --angle-factor: 8;
+      --angle-factor: 9;
     }
 
     &:nth-of-type(5n) {
-      --angle-factor: 10;
+      --angle-factor: 12;
     }
 
     &:nth-of-type(7n) {
-      --angle-factor: 12;
+      --angle-factor: 15;
     }
 
     &.slide--cover {
@@ -248,8 +260,8 @@
       background-color: Canvas;
       background-image: radial-gradient(
           55.51% 55.51% at 50% 56.73%,
-          light-dark(#def6eaee, #092e20ee) 0%,
-          light-dark(#89e7c3ee, color-mix(in oklch, #092e20ee, Canvas 60%)) 65%
+          light-dark(#def6eaee, #125e41aa) 0%,
+          light-dark(#89e7c3ee, color-mix(in oklch, #2acd8faa, Canvas 60%)) 65%
         ),
         url("assets/bg/left-cloud.svg"), url("assets/bg/right-cloud.svg"),
         url("assets/bg/right-cloud.svg"), url("assets/bg/left-cloud.svg");
@@ -351,7 +363,7 @@
       display: grid;
       padding: 0;
 
-      @media (min-width: 768px) {
+      @media (min-width: 960px) {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
       }
@@ -365,8 +377,8 @@
         bottom: 0;
         inset-inline-end: 0;
         padding: 0.125em 0.25em;
-        color: Canvas;
-        background-color: CanvasText;
+        color: white;
+        background-color: black;
       }
     }
   }
@@ -377,8 +389,8 @@
     font-size: 0.8em;
 
     figcaption {
-      color: Canvas;
-      background-color: CanvasText;
+      color: white;
+      background-color: black;
       position: absolute;
       bottom: 0;
       padding: 0.125em 0.25em;
@@ -395,6 +407,14 @@
     &.full-bleed--blend img {
       border: 0;
       mix-blend-mode: multiply;
+
+      @media (prefers-color-scheme: dark) {
+        mix-blend-mode: normal;
+      }
+
+      @media (forced-colors: active) {
+        mix-blend-mode: normal;
+      }
     }
   }
 
@@ -412,7 +432,7 @@
   .hero-picture {
     --headroom-z-index: 10;
     --transition-duration: 0.3s;
-    --rest-angle: -3deg;
+    --rest-angle: -2deg;
     --slide-start-x: 0%;
     --slide-start-y: -5%;
     --slide-end-x: 0%;
@@ -421,7 +441,8 @@
     max-width: max(260px, 70vw);
     /* Allow one image to go above the other on hover. */
     position: relative;
-    margin-left: 10px;
+    margin-top: 10px !important;
+    margin-inline-start: 10px;
     margin-bottom: 50px;
     padding: 5px;
     border-radius: 3px;
@@ -442,6 +463,10 @@
       margin-inline-start: 50px;
       padding: 10px;
       max-width: 35dvmin;
+    }
+
+    @media (forced-colors: active) {
+      border: 2px solid CanvasText;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -491,7 +516,9 @@
     }
 
     &.hero-picture--small {
-      max-width: 25dvmin;
+      @media (min-width: 960px) {
+        max-width: 25dvmin;
+      }
     }
 
     &.hero-picture--odd {
@@ -520,56 +547,44 @@
 
     img {
       border-radius: 50%;
+      border: 2px solid CanvasText;
     }
   }
 
+  .sponsor {
+    @apply flex flex-col justify-center;
+
+    @media (forced-colors: active) {
+      img {
+        forced-color-adjust: none;
+        background-color: var(--color-official-white);
+        padding: 1rem;
+      }
+    }
+  }
 
   .button {
-    text-decoration: none;
-    background-color: white;
-    padding: 10px 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    position: relative;
     display: inline-block;
-    margin: 20px;
+    text-decoration: none;
+    background-color: var(--hue);
+    background: linear-gradient(to right, var(--hue) 30%, var(--bg2) 120%);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-weight: var(--font-weight-bold);
+    font-size: 0.8em;
+    letter-spacing: 1px;
     border-radius: 8px;
-    transition: background .5s, color .5s;
+    transition: background-color .5s, color .5s;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    color: white;
 
-    &::after {
-      content: '';
-      position: absolute;
-      background: linear-gradient(to right, var(--hue) 30%, var(--bg2) 120%);
-      inset: -8px;
-      z-index: -1;
-      border-radius: calc(8px + 1px);
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-    }
-    span {
-      background: linear-gradient(to right, var(--hue) 30%, var(--bg2) 120%);
-      -WebKit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      transition: color .5s;
-      line-height: 20px;
+    @media (forced-colors: active) {
+      border: 3px solid ButtonText;
     }
 
-    &:hover {
-      background-color: transparent;
-      color: #fff;
-
-      span {
-        color: CanvasText;
-      }
-
+    &:has(~ .button) {
+      margin-inline-end: 10px;
     }
-
-    @media(prefers-reduced-motion: no-preference) {
-    &:hover span::after,&:focus span::after {
-        transform: translate(80%, -10%) rotate(-20deg);
-        opacity: 1
-    }
-}
   }
 }
 
@@ -595,7 +610,7 @@
   cursor:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='24'><text y='50%'>🇪🇸</text></svg>") 16 0, auto;
 }
 
-.slide:has(img[src*="django-heart"]) img, .button {
+img[src*="django-heart"] {
   cursor:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><text y='50%'>✨</text></svg>") 16 0, auto;
 }
 
