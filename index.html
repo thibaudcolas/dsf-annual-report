@@ -45,6 +45,7 @@
               src="assets/django-logo-negative.svg"
               width="1083"
               height="833"
+              loading="lazy"
               alt="Django"
           /></a>
         </figure>
@@ -75,8 +76,8 @@
               alt="Chaim Kirby on stage at DjangoCon Europe 2025 in Porto. He stands to the right of the stage next to the lectern, with a slide to his left 'Short history of Django and the DSF'. At the foreground there is a caption screen"
               width="390"
               height="260"
-              class="aspect-[3/2]"
               loading="lazy"
+              class="aspect-[3/2]"
             />
             <figcaption>
               <a href="https://djangotv.com/videos/djangocon-europe/2022/djangocon-2022-foundational-knowledge-the-why-and-how-of-the-django-software-foundation/">DSF Why & How by Chaim Kirby, DjangoCon Europe 2022</a>
@@ -101,7 +102,7 @@
 
       <section class="slide slide--2col">
         <div>
-          <h3>Django Website User Research: Community Insights</h3>
+          <h3>Django Website User Research</h3>
           <p>The extensive <a href="https://www.20tab.com/20blog/user-research-django-website">user research conducted by 20tab</a> on the Django website in 2023 provides invaluable insights into user experiences, needs, and opportunities for improvement. <br> The findings help us drive our contributors’ work on the website, for example on accessibility and documentation reading experience. It’s also an essential tool for our Foundation to share our mission and receive donations.</p>
           <p><strong>Thank you 20tab for your work on this report!</strong></p>
 
@@ -121,9 +122,10 @@
             src="assets/graphs/what_aspects_of_the_website_would_you_like_to_see_improved.webp"
             width="800"
             height="594"
+            loading="lazy"
             alt="Pie chart: What aspects of the website would you like to see improved? Usability: 35.5%. Interface aesthetics: 29.1%. Content quality: 20.6%. Other: 14.8%"
           />
-            <figcaption class="mt-4">
+            <figcaption class="mt-[5vh]">
               <em>Pie chart: What aspects of the website would you like to see improved?</em>
             </figcaption>
           </figure>
@@ -141,13 +143,13 @@
         <p>With the working groups concept <a href="https://www.djangoproject.com/weblog/2023/oct/13/announcing-dsf-working-groups/">announced in late 2023</a>, early 2024 marked the formation of several DSF working groups, enhancing opportunities for community members to participate actively in shaping Django’s future. The <a href="https://github.com/django/dsf-working-groups/blob/main/active/social-media.md">social media working group</a> and <a href="https://github.com/django/dsf-working-groups/blob/main/active/code-of-conduct.md">code of conduct working group</a> were the first two to launch successfully.</p>
         <p>The creation of the social media working group is a good example of our commitment to treat our communication efforts more seriously. This group is a critical step toward ensuring the Foundation&#39;s sustainability by enhancing our visibility and community engagement.</p>
         <div class="grid md:grid-cols-3 gap-4 mt-[5vh]">
-          <div class="bg-official-green text-official-white border-transparent border-2 p-4">
+          <div class="project-metric">
             <p>166 <br> social media posts over 2024</p>
           </div>
-          <div class="bg-official-green text-official-white border-transparent border-2 p-4">
-            <p>+100% <br> LinkedIn followers over 2024</p>
+          <div class="project-metric">
+            <p>+100% 🎉 <br> LinkedIn followers over 2024</p>
           </div>
-          <div class="bg-official-green text-official-white border-transparent border-2 p-4">
+          <div class="project-metric">
             <p>12M <br> views on <a href="https://www.reddit.com/r/django/">r/Django</a></p>
           </div>
         </div>
@@ -166,10 +168,10 @@
           <h3>Djangonaut Space: Inspiring New Contributors 🚀</h3>
           <p>We’re elated by the work of <a href="https://djangonaut.space/">Djangonaut Space</a>. After a successful pilot in 2023, <a href="https://djangonaut.space/comms/2024/03/08/2024-session-1-mission-debrief/">session 1 of Djangonaut Space</a> kicked off, bringing mentorship and growth opportunities to new Django contributors. This program embodies our commitment to nurturing talent and fostering a welcoming environment for new members. There were three sessions in total over 2024, branching out to contribute to third-party packages in addition to Django itself.</p>
           <div class="grid md:grid-cols-2 gap-4 mt-[5vh]">
-            <div class="bg-official-green text-official-white border-transparent border-2 p-4">
+            <div class="project-metric">
               <p>46 <br> participants in 2024</p>
             </div>
-            <div class="bg-official-green text-official-white border-transparent border-2 p-4">
+            <div class="project-metric">
               <p>80 <br> PRs merged 🎉</p>
             </div>
           </div>
@@ -221,68 +223,330 @@
         </div>
       </section>
 
-      <section class="slide">
-        <h3>Welcoming New Django Fellow Sarah Boyce</h3>
-        <p>We <a href="https://www.djangoproject.com/weblog/2024/mar/22/welcome-our-new-fellow-sarah-boyce/">welcomed Sarah Boyce</a> as our new Django Fellow, a pivotal role to support our project 🌈. Sarah’s extensive experience as a developer and advocate deeply enriches our community. As we welcome Sarah, we also extend profound gratitude to Mariusz Felisiak for his dedicated five-year tenure as Django Fellow, leaving behind a lasting legacy.</p>
-        <img
-          class="scale-a-lil"
-          src="assets/pony-flying.svg"
-          width="1083"
-          height="833"
-          alt="Django Pony, smiling, flying with two pegasus wings, white with pink hooves and tail and mane"
-        />
-      </section>
+      <section class="slide slide--4grid">
+        <div class="md:row-span-1 md:col-span-2">
+          <h3>Welcoming New Django Fellow Sarah Boyce</h3>
+          <div class="mt-[5vh] grid sm:flex items-center gap-4">
+            <p>We <a href="https://www.djangoproject.com/weblog/2024/mar/22/welcome-our-new-fellow-sarah-boyce/">welcomed Sarah Boyce</a> as our new Django Fellow, a pivotal role to support our project 🌈. Sarah’s extensive experience as a developer and advocate deeply enriches our community. As we welcome Sarah, we also extend profound gratitude to <a href="https://www.mariuszfelisiak.org/">Mariusz Felisiak</a> for his dedicated five-year tenure as Django Fellow, leaving behind a lasting legacy.</p>
+            <img class="mix-blend-multiply rounded-full aspect-square h-auto! w-64 mx-auto" src="assets/photos/people/sarah-boyce-django-core-demystified.jpg" alt="Black and white photo of Sarah, smiling, holding a flower" width="460" height="460" loading="lazy">
+          </div>
+          <p>We also got to thank Mariusz properly in person at DjangoCon Europe 2024 ❤️</p>
 
-      <section class="slide">
-        <h2>Our mission</h2>
-        <p>
-          <strong>Welcome message:</strong>Briefly introduce the DSF’s role in
-          nurturing the Django ecosystem.
-        </p>
-        <img
-          class="scale-a-lil"
-          src="assets/pony-flying.svg"
-          width="1083"
-          height="833"
-          alt="Django Pony, smiling, flying with two pegasus wings, white with pink hooves and tail and mane"
-        />
-      </section>
-
-      <section class="slide slide--chaoss-dei-badge">
-        <h2>Celebrating Inclusivity: The CHAOSS DEI Bronze Badge</h2>
-        <p>The <a href="https://www.djangoproject.com/weblog/2025/jan/19/django-earns-the-chaoss-dei-bronze-badge/">CHAOSS Diversity, Equity, and Inclusion Bronze Badge</a> reflects our continued commitment to creating a diverse, equitable, and inclusive environment. This achievement is a direct recognition of our work in this space, in particular enhancing newcomer experiences within our community.</p>
-        <div class="grid self-center">
-          <img src="assets/CHAOSS-DEI-Bronze-Badge.svg" alt="CHOASS DEI Bronze Badge" width="393" height="78" />
         </div>
+        <figure class="full-bleed full-bleed--blend">
+          <img
+            class="object-center"
+            src="assets/photos/djangocon_europe_2024/djangocon_europe_2024_mariusz_on_stage.webp"
+            alt="Mariusz on stage, smiling, next to a whiteboard that says 'Thank you Mariusz for your service'"
+            width="799"
+            height="533"
+            loading="lazy"
+          />
+        <figcaption class="start-0">🩷 thank you Mariusz</figcaption>
+      </figure>
+      <figure class="full-bleed full-bleed--blend">
+            <img
+              class="object-center"
+              src="assets/photos/djangocon_europe_2024/djangocon_europe_2024_mariusz_and_cagil.webp"
+              alt="Mariusz and Çağıl on stage, smiling, looking at the whiteboard with thank you notes for Mariusz"
+              width="799"
+              height="533"
+              loading="lazy"
+            />
+          <figcaption class="start-0">Çağıl thanking Mariusz on our behalf 🎁</figcaption>
+        </figure>
+      </section>
+
+
+      <section class="slide" style="--angle-factor:34;">
+        <h3>Celebrating 10 years of Django Girls</h3>
+        <p>This year marked a significant milestone: the <a href="https://blog.djangogirls.org/post/764500535249436672/its-our-10th-birthday">10th anniversary of Django Girls</a>! 🎉 Over the past decade, an inspiring 2,467 volunteers have organized 1,137 free workshops across 593 cities in 109 countries, empowering more than 24,500 women in tech. Many attendees have transformed their workshop experiences into successful tech careers.</p>
         <blockquote class="mt-[5vh]">
-          <p>“The CHAOSS DEI Bronze Badge embodies Django’s ongoing efforts to ensure everyone feels seen, heard, and valued. Django’s commitment to diversity isn’t just symbolic—it’s practical, visible, and impactful. I’m honored to contribute to such an inclusive and forward-thinking community.”</p>
-          <p>— <a href="https://cm.linkedin.com/in/ariane-djeupang">Ariane Djeupang</a>, DjangoCon US Marketing Co-Chair 2025</p>
-          </blockquote>
-        <blockquote>
-          <p>“Django earning the CHAOSS DEI Bronze Badge reminds me of why I’m proud to be a Djangonaut. It shows that our community doesn’t just talk about diversity and inclusion—we intentionally build it into the fabric of everything we do. Django is sending a clear message to newcomers and longtime contributors alike: your voice matters here. It’s a meaningful milestone that reflects our ongoing commitment to equity, and inclusion.”</p>
-          <p>– <a href="https://www.linkedin.com/in/keanyaphelps">Keanya Phelps</a> DjangoCon US Conference Chair 2025</p>
+          <p>“I was a stay at home mom. I was learning how to code and had a great experience at the Django Girls workshop. After completing training with an intensive bootcamp, I came back to the workshop as a coach. I am now a data engineer at Xbox.”</p>
+          <p>– 2016 attendee and 2017 coach</p>
         </blockquote>
+        <blockquote>
+          <p>“I am now a software engineer in the space industry. The openness and supportive atmosphere of the first Django Girls workshop I attended made me consider tech as an alternative.”</p>
+          <p>– 2017 workshop attendee</p>
+        </blockquote>
+        <div class="sm:grid grid-cols-2">
+          <div class="grid sm:flex items-center gap-4">
+            <p>For more information, watch <a href="https://2024.djangocon.eu/pretalx/djangocon-europe-2024/talk/VBE7NF/">Django Girls: Decade in Review and Beyond</a> by Django Girls Trustees Anna Makarudze and Rachell Calhoun at DjangoCon Europe 2024.</p>
+            <img class="aspect-square h-auto! w-32 mx-auto" src="assets/django-heart.svg" alt="Django Girls pixelated heart" width="32" height="32">
+          </div>
+          <figure class="hero-picture hero-picture--odd">
+            <img
+              alt=""
+              src="assets/photos/djangocon_europe_2024/djangocon_europe_2024_anna_and_rachell.webp"
+              width="690"
+              height="460"
+              class="aspect-[3/2]"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://2024.djangocon.eu/pretalx/djangocon-europe-2024/talk/VBE7NF/">Anna and Rachell on stage</a>
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="slide slide--2col">
         <div>
-          <img
-            class="bg"
-            src="assets/photos/laptop-conference-stickers-vertical.webp"
-            alt="Laptop with stickers for DjangoCon US 2024, DjangoCon Europe 2024, Django London, Djangonaut Space, Django Girls"
-          />
+          <h3>Insights from the 2023 Django Developers Survey</h3>
+          <p>The <a href="https://lp.jetbrains.com/django-developer-survey-2023/">third annual Django Developers Survey</a>, conducted in collaboration with <a href="https://www.jetbrains.com/pycharm/web-development/django/">PyCharm</a> and with around 4,000 participants, provided invaluable insights into how our community uses Django:</p>
+          <ul>
+            <li>64% of respondents use Django both for work and for their personal / educational / side projects</li>
+            <li>47% of developers use VS Code, 29% use PyCharm, as their primary text editor or IDE</li>
+            <li>54% use YouTube channels to learn about Django or follow project news</li>
+          </ul>
+          <blockquote>
+            <p>“YouTube is my best source when it comes to learning Django. I search for Django conference talks and tutorials and rewatch them.”</p>
+            <p>– <a href="https://www.linkedin.com/in/joseph-anyetei-sowah/">Joseph Anyetei Sowah</a>, DevOps Engineer</p>
+          </blockquote>
+
         </div>
-        <div>
-          <p>2-col full-bleed</p>
+        <div class="bg-official-white">
+          <h4>Q: <em>What web resources do you read or follow for Django, excluding the official Django channels?</em></h4>
+          <div class="grid md:grid-cols-2 gap-4 mt-[5vh]">
+            <div><h5 id="survey-youtube-channels">YouTube channels</h5>
+            <ul>
+          <li><a href="https://www.youtube.com/@DennisIvy">Dennis Ivy</a></li>
+          <li><a href="https://www.youtube.com/@bugbytes3923">BugBytes</a></li>
+          <li><a href="https://www.youtube.com/@freecodecamp">freeCodeCamp.org</a></li>
+          <li><a href="https://www.youtube.com/@veryacademy">Very Academy</a></li>
+          <li><a href="https://www.youtube.com/@coreyms">Corey Schafer</a></li>
+          </ul></div>
+          <div><h5 id="survey-podcasts">Podcasts</h5>
+          <ul>
+          <li><a href="https://djangochat.com/">Django Chat</a></li>
+          <li><a href="https://talkpython.fm/">Talk Python to Me</a></li>
+          <li><a href="https://realpython.com/podcasts/rpp/">The Real Python Podcast</a></li>
+          <li><a href="https://pythonbytes.fm/">Python Bytes</a></li>
+          </ul></div>
+          <div><h5 id="survey-blogs">Blogs</h5>
+          <ul>
+          <li><a href="https://adamj.eu/">Adam Johnson</a></li>
+          <li><a href="https://medium.com/">Medium</a></li>
+          <li><a href="https://realpython.com/">Real Python Tutorials</a></li>
+          <li><a href="https://simpleisbetterthancomplex.com/">Simple is Better Than Complex</a></li>
+          <li><a href="https://testdriven.io/">TestDriven.io</a></li>
+          </ul></div>
+          <div><h5 id="survey-forums">Forums</h5>
+          <ul>
+          <li><a href="https://stackoverflow.com/questions/tagged/django">Stack Overflow</a></li>
+          <li><a href="https://forum.djangoproject.com/">The Django forum</a></li>
+          <li><a href="https://www.reddit.com/r/django/">Django subreddit</a></li>
+          </ul></div>
+          </div>
         </div>
       </section>
 
-      <section class="slide slide--tri-radial">
-        <p>Tri-radial bg</p>
+      <section class="slide slide--2col">
+        <div>
+          <h3>DjangoCon Europe 2024 ☀️</h3>
+          <p><a href="https://2024.djangocon.eu/">DjangoCon Europe 2024</a> in Vigo was a tremendous success, featuring high-quality talks, engaging workshops, and community sprints against the scenic backdrop of the Spanish coast 🇪🇸. We thank our <a href="https://2024.djangocon.eu/about/credits/index.html">community organizers</a> and <a href="https://www.evolutio.pt/">evolutio</a>, who made it possible for DjangoCon to happen in Spain for the first time ever! And make sure to check out all of their amazing pictures 📷️ on <a href="https://www.flickr.com/photos/djangocon/albums/72177720318008635">Flickr: DjangoCon Europe 2024: Vigo</a>.</p>
+          <p class="mt-[5vh]">There were a lot of excellent talks. Here are some of our highlights:</p>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=AVqjbUqT8ck">Django + Alpine.js + htmx Ups & Down – Karen&nbsp;Tracey</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ok_xqkBJXP8">Greening Digital With Django – Chris&nbsp;Adams</a></li>
+            <li><a href="https://www.youtube.com/watch?v=GTDYwEXv-sE">Django, SQLite, and Production – Anže</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Jc_oDg8ertI">How we can build web applications that respect the user’s privacy – Hanna&nbsp;Kollo</a></li>
+            <li><a href="https://www.youtube.com/watch?v=uC49aH6rw3o">Accessibility for the Django Community – Saptak&nbsp;S</a></li>
+          </ul>
+        </div>
+        <div>
+          <figure class="hero-picture hero-picture--odd">
+            <img
+              src="assets/videos/djangocon_europe_2024_jake_howard_RxcRBNqxjeY.webp"
+              alt="DjangoCon Europe 2024 - Talk - Jake Howard - Empowering Django with Background Workers"
+              width="640"
+              height="480"
+              class="aspect-[4/3]"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://www.youtube.com/watch?v=RxcRBNqxjeY">Empowering Django with Background Workers</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture">
+            <img
+              src="assets/videos/djangocon_europe_2024_meritxell_sarda_ventosa_1NkZEQ8g6OU.webp"
+              alt="DjangoCon Europe 2024 - Talk - Meritxell Sardà Ventosa - Keynote: AI, away from the hype"
+              width="640"
+              height="480"
+              class="aspect-[4/3]"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://www.youtube.com/watch?v=1NkZEQ8g6OU">AI, away from the hype</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture hero-picture--odd">
+            <img
+              src="assets/videos/djangocon_europe_2024_mia_bajic_AERuDe9YxWE.webp"
+              alt="DjangoCon Europe 2024 - Talk - Mia Bajić - Combining Django ORM & FastAPI in a Single App"
+              width="640"
+              height="480"
+              class="aspect-[4/3]"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://www.youtube.com/watch?v=AERuDe9YxWE">Django ORM & FastAPI</a>
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="slide slide--4grid">
-        <figure>
+        <figure class="full-bleed">
+          <img
+            class="object-center"
+            src="assets/photos/djangocon_europe_2024/djangocon_europe_2024_group_photo.webp"
+            alt="Group photo of conference attendees, on a large patio, with the sea and coastline visible in the background"
+            loading="lazy"
+          />
+          <figcaption class="start-0">
+            📸 seaside group photo
+          </figcaption>
+        </figure>
+        <figure class="full-bleed">
+          <img
+            class="object-left"
+            src="assets/photos/djangocon_europe_2024/djangocon_europe_2024_beach.webp"
+            alt="DjangoCon written in the sand on a beach, with the sea in the background"
+            loading="lazy"
+          />
+          <figcaption class="start-0">🏖️ <span lang="es">¡vamos a la playa!</span></figcaption>
+        </figure>
+        <figure class="full-bleed">
+          <img
+            class="object-left"
+            src="assets/photos/djangocon_europe_2024/djangocon_europe_2024_htmx-talk.webp"
+            width="799"
+            height="533"
+            alt="Conference talk about htmx, seen from the back of the room, with attendees sitting in rows in the foreground"
+            loading="lazy"
+          />
+          <figcaption class="start-0">The promise of htmx 🤝 </figcaption>
+        </figure>
+        <figure class="full-bleed">
+          <img
+            class="object-center"
+            src="assets/photos/djangocon_europe_2024/djangocon_europe_2024_sprints.webp"
+            width="799"
+            height="533"
+            alt="Conference sprint attendees sitting around a table, working on their laptops and chatting to each other"
+            loading="lazy"
+          />
+          <figcaption class="start-0">Conference sprints 🏃</figcaption>
+        </figure>
+        <p class="credit">
+          Photos by <a href="https://2024.djangocon.eu/">2024 organizers</a>
+        </p>
+      </section>
+
+      <section class="slide slide--4grid">
+        <div>
+          <h3>Django at EuroPython</h3>
+          <p>The Django Software Foundation was also present at <a href="https://ep2024.europython.eu/">EuroPython 2024</a> in Prague 🇨🇿, connecting with the wider Python community, showcasing our work, and reinforcing our commitment to collaboration across the Python ecosystem 🫶. <br> We’re looking forward to <a href="https://ep2025.europython.eu/">EuroPython 2025</a>!</p>
+        </div>
+        <figure class="full-bleed">
+          <img
+            class="object-center"
+            src="assets/photos/europython/europython_2024_david_katia_paolo.webp"
+            alt="David, Kátia, Paolo at the Django booth, with a Django pony banner behind them"
+            width="1024"
+            height="1024"
+            loading="lazy"
+          />
+          <figcaption class="start-0">👋 David, Kátia, Paolo at the booth</figcaption>
+        </figure>
+        <figure class="full-bleed bg-[black]">
+          <img
+            class="object-center"
+            src="assets/photos/europython/europython_2024_dsf_badge.webp"
+            alt="Close-up of a EuroPython Lanyard with a DSF pin on top"
+            width="1024"
+            height="768"
+            loading="lazy"
+          />
+          <figcaption class="start-0">🦄 🐍 DSF badge</figcaption>
+        </figure>
+        <figure class="full-bleed">
+          <img
+            class="object-center"
+            src="assets/photos/europython/europython_2024_paolo_sarah_cagil.webp"
+            alt="Paolo, Sarah, Çağıl taking a selfie with EuroPython 2024 lanyards on, smiling at the camera"
+            width="1024"
+            height="768"
+            loading="lazy"
+          />
+          <figcaption class="start-0">Paolo, Sarah, Çağıl 🤳</figcaption>
+        </figure>
+        <p class="credit">
+          Photos by <a href="https://fosstodon.org/@paulox/112763291586753449">Paolo Melchiorre</a>
+        </p>
+      </section>
+
+      <section class="slide slide--2col">
+        <div>
+          <h3>DjangoCon US 2024: Community and Collaboration</h3>
+          <figure class="hero-picture hero-picture--odd">
+            <img
+              src="assets/videos/djangocon_us_2024_lacey_henschel_ctkC-_Y1EaM.webp"
+              alt="Lacey Henschel - DjangoCon US 2024 Perspectives"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://www.youtube.com/watch?v=ctkC-_Y1EaM">Lacey Henschel</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture">
+            <img
+              src="assets/videos/djangocon_us_2024_kudzayi_bamhare_FcDVSUh-Njk.webp"
+              alt="Kudzayi Bamhare - DjangoCon US 2024 Perspectives"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://www.youtube.com/watch?v=FcDVSUh-Njk">Kudzayi Bamhare</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture hero-picture--odd">
+            <img
+              src="assets/videos/djangocon_us_2024_sarah_boyce_SmwL00tSzhE.webp"
+              alt="Sarah Boyce - DjangoCon US 2024 Perspectives"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://www.youtube.com/watch?v=SmwL00tSzhE">Sarah Boyce</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <p><a href="https://2024.djangocon.us/">DjangoCon US 2024</a> in Durham, North Carolina, was an incredible event filled with insightful talks, productive sprints, and memorable community interactions. Here are excerpts from three community members’ experiences.</p>
+          <blockquote>
+            <p>“Those personal conversations, those personal moments are the most special thing about DjangoCon and what keeps me coming back. That&#39;s how you build these lifelong connections and friendships, and also do some really valuable networking.”</p>
+            <p>– <a href="https://www.youtube.com/watch?v=ctkC-_Y1EaM">Lacey Henschel</a></p>
+          </blockquote>
+          <blockquote>
+            <p>“DjangoCon US had a high level of organization. The social element is one of my favorite parts; I think a lot of people that attend this conference are ready and willing to meet new people and engage.”</p>
+            <p>– <a href="https://www.youtube.com/watch?v=FcDVSUh-Njk">Kudzayi Bamhare</a></p>
+          </blockquote>
+          <blockquote>
+            <p>“The best thing about DjangoCon is I get the opportunity to really meet a lot of the people that I&#39;ve been working with online or talking to.”</p>
+            <p>– <a href="https://www.youtube.com/watch?v=SmwL00tSzhE">Sarah Boyce</a></p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="slide slide--4grid">
+        <figure class="full-bleed">
           <img
             class="object-center"
             src="assets/photos/djangocon_us_2024/djangocon_us_kojo_idrissa_orientation.webp"
@@ -290,10 +554,10 @@
             loading="lazy"
           />
           <figcaption class="start-0">
-            👋 Kojo Idrissa welcomes attendees at DjangoCon US
+            👋 Kojo Idrissa welcomes attendees
           </figcaption>
         </figure>
-        <figure>
+        <figure class="full-bleed">
           <img
             class="object-center"
             src="assets/photos/djangocon_us_2024/djangocon_us_hallway_track.webp"
@@ -302,7 +566,7 @@
           />
           <figcaption class="start-0">DjangoCon US hallway track 🌈</figcaption>
         </figure>
-        <figure>
+        <figure class="full-bleed">
           <img
             class="object-center"
             src="assets/photos/djangocon_us_2024/djangocon_us_django_girls_shirts_crew.webp"
@@ -311,7 +575,7 @@
           />
           <figcaption class="start-0">🩷 Django Girls+ shirts</figcaption>
         </figure>
-        <figure>
+        <figure class="full-bleed">
           <img
             class="object-right"
             src="assets/photos/djangocon_us_2024/djangocon_us_signed_tote_bag.webp"
@@ -325,37 +589,395 @@
         </p>
       </section>
 
+      <section class="slide slide--4grid bg-[black]">
+        <figure class="full-bleed col-span-2 row-span-2 self-center">
+          <img class="w-auto" src="assets/photos/djangocon_us_2024/djangocon_us_2024_group_photo.jpg" alt="Group photo at DjangoCon US 2024, with all participants raising their arms while standing on stairs in front of the conference venue building" width="1400" height="933" loading="lazy">
+          <figcaption class="start-0">Group photo 🙌</figcaption>
+        </figure>
+        <p class="credit">
+          Photo by <a href="https://bartpawlik.format.com/">Bart Pawlik</a>
+        </p>
+      </section>
+      <section class="slide slide--tri-radial">
+        <h3>Google Summer of Code 2024</h3>
+      </section>
+
+      <section class="slide">
+        <h3>2025 DSF Board Elections</h3>
+        <p>The Board elections are a critical moment for our community. This year, <a href="https://www.djangoproject.com/weblog/2024/oct/28/2025-dsf-board-candidates/">21 incredible candidates</a> stepped forward, reflecting the depth and passion within our Django ecosystem. From this diverse group, four new Board members were elected: <a href="https://www.linkedin.com/in/abigail-afi-gbadago/">Abigail Afi Gbadago</a>, <a href="https://jefftriplett.com/">Jeff Triplett</a>, <a href="https://www.paulox.net/">Paolo Melchiorre</a>, and <a href="https://carrick.eu/">Tom Carrick</a> — each bringing fresh perspectives and valuable experience to the table. They join <a href="https://jacobian.org/">Jacob Kaplan-Moss</a>, <a href="https://sarahabd.com/">Sarah Abderemane</a>, and <a href="https://thib.me/">Thibaud Colas</a> who were elected on the 2024 Board for a two-year term.</p>
+        <p>Here are excerpts from our new Board members’ work which you might find interesting!</p>
+        <div class="sm:grid grid-cols-2 gap-8">
+          <figure class="hero-picture hero-picture--odd">
+            <img
+              src="assets/videos/djangocon_us_2023_abigail_afi_gbadago_YrlSlOZOkNQ.webp"
+              alt="Abigail Afi Gbadago - How Django uses migrations to manage changes to the database schema - DjangoCon US 2023 Durham"
+              width="640"
+              height="480"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangotv.com/videos/djangocon-us/2023/strategies-for-handling-conflicts-and-rollbacks-in-django-database-migrations-abigail-afi-gbadago/">Database migrations - Abigail Afi Gbadago</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture">
+            <img
+              src="assets/videos/djangochat_jeff_triplett.webp"
+              alt="Jeff Triplett #163 - Django Chat"
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangochat.com/episodes/funding-open-source-jeff-triplett">Funding Open Source - Jeff Triplett</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture">
+            <img
+              src="assets/videos/djangoday_cph_2022_paolo_QE9XgoSMCJI.webp"
+              alt="Django Day Copenhagen 2022 - Make the most of Django - Paolo Melchiorre"
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangotv.com/videos/django-day-copenhagen/2022/paolo-melchiorre-make-the-most-of-django-django-day-cph-2022/">Make the most of Django - Paolo Melchiorre</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture hero-picture--odd">
+            <img
+              src="assets/videos/djangocon_europe_2024_tom_carrick_JUCo9I08tgc.webp"
+              alt="DjangoCon Europe 2024 - Tom Carrick - Ramping up the Django Admin"
+              width="640"
+              height="480"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangotv.com/videos/djangocon-europe/2024/djangocon-europe-2024-ramping-up-the-django-admin/">Ramping up the Django admin - Tom Carrick</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide slide--tri-radial">
+        <h3>Honoring Community Leadership: Malcolm Tredinnick Memorial Prize</h3>
+        <p>We’re delighted to honor <a href="https://www.rachellcalhoun.com/">Rachell Calhoun</a> with the <a href="https://www.djangoproject.com/weblog/2024/nov/24/2024-malcolm-tredinnick-memorial-prize-awarded-to-/">2024 Malcolm Tredinnick Memorial Prize</a>, celebrating her remarkable contributions to the Django community. Rachell&#39;s leadership through initiatives like Django Girls and Djangonaut Space have changed the careers and lives of many Djangonauts.</p>
+        <div class="mt-[5vh] lg:grid grid-cols-2 gap-8">
+          <div>
+            <blockquote>
+              <p>“Rachell advocates for others constantly through sponsorship, inclusivity, and connection. She is extremely empathic and seeks to not only welcome others in, but to actively bring them into the group.”</p>
+              <p>–&nbsp;<a href="https://www.better-simple.com/">Tim&nbsp;Schilling</a></p>
+            </blockquote>
+            <blockquote>
+              <p>“Rachell shows people that she believes in them. She does this in a friendly, gentle, and encouraging manner. She never forces anyone to make decisions that they don’t feel comfortable with. The community is really lucky to have Rachell.”</p>
+              <p>–&nbsp;<a href="https://bsky.app/profile/ontowhee.bsky.social">Lilian</a></p>
+            </blockquote>
+          </div>
+          <figure>
+            <img class="rounded-full" src="assets/photos/people/djangocon_us_2023_rachell_portrait.jpg" alt="Rachell, smiling, wearing a black shirt and mauve top, holding her laptop" width="533" height="799" loading="lazy">
+            <figcaption>Photo by <a href="https://bartpawlik.format.com/">Bart Pawlik</a></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h3>Steering Council renewal and governance challenges</h3>
+        <p>In response to <a href="https://www.djangoproject.com/weblog/2024/nov/14/technical-governance-challenges-and-opportunities/">governance challenges</a> highlighted in 2024, including the need for more proactive technical leadership and a clearer technical direction, the DSF Board facilitated a crucial <a href="https://www.djangoproject.com/weblog/2024/dec/10/django-6x-steering-council-candidates/">election for the Django 6.x Steering Council</a>. The new members are <a href="https://frankwiles.com/">Frank Wiles</a>, <a href="https://noumenal.es/">Carlton Gibson</a>, <a href="https://www.better-simple.com/">Tim Schilling</a>, <a href="https://emma.has-a.blog/">Emma Delescolle</a>, and <a href="https://fosstodon.org/@lilyf">Lily Foote</a>. As a group, they are committed to addressing these governance issues, safeguarding Django’s technical excellence, and guiding its future development.</p>
+        <p>Here are excerpts from their work to understand their perspectives.</p>
+        <div class="sm:grid grid-cols-3 gap-8">
+          <figure class="hero-picture hero-picture--small hero-picture--odd">
+            <img
+              src="assets/videos/djangocon_us_2024_frank_wiles_YE_SXB7xkSw.webp"
+              alt="A Brief History of Django with Frank Wiles"
+              width="640"
+              height="480"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangotv.com/videos/djangocon-us/2024/a-brief-history-of-django-with-frank-wiles/">A Brief History of Django - Frank Wiles</a>
+            </figcaption>
+          </figure>
+
+          <figure class="hero-picture hero-picture--small hero-picture--odd">
+            <img
+              src="assets/videos/djangonaut_space_carlton_gibson_YOZWF86TGmo.webp"
+              alt="Know Your Limits: On Surviving Open Source by Carlton Gibson"
+              width="640"
+              height="480"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangotv.com/videos/djangonaut-space/2024/know-your-limits-on-surviving-open-source-by-carlton-gibson-djangonaut-space/">Know Your Limits: On Surviving Open Source - Carlton Gibson</a>
+            </figcaption>
+          </figure>
+
+          <figure class="hero-picture hero-picture--small">
+            <img
+              src="assets/videos/djangocon_us_2024_tim_schilling_J0OrbAPKdHc.webp"
+              alt="You got that nice tech salary, now what? with Tim Schilling"
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangotv.com/videos/djangocon-us/2024/you-got-that-nice-tech-salary-now-what-with-tim-schilling/">You got that nice tech salary, now what? - Tim Schilling</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture hero-picture--small hero-picture--odd">
+            <img
+              src="assets/videos/djangonaut_space_emma_delescolle_Urab3PVYXio.webp"
+              alt="Django: Looking Forward to the Next 20 years with Emma Delescolle - Keeping changes lightweight - Small changes are safer - Small changes get merged more easily - Emma Delescolle"
+              width="640"
+              height="480"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangotv.com/videos/djangonaut-space/2024/django-looking-forward-to-the-next-20-years-with-emma-delescolle/">Django: Looking Forward to the Next 20 years - Emma Delescolle</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture hero-picture--small">
+            <img
+              src="assets/videos/djangochat_lily_foote.webp"
+              alt="Lily Foote #178 - Django Chat"
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangochat.com/episodes/django-and-rust-tooling-lily-foote">Django and Rust Tooling - Lily Foote</a>
+            </figcaption>
+          </figure>
+      </section>
+
+      <section class="slide slide--chaoss-dei-badge">
+        <h3>Celebrating Inclusivity: The CHAOSS DEI Bronze Badge</h3>
+        <p>The <a href="https://www.djangoproject.com/weblog/2025/jan/19/django-earns-the-chaoss-dei-bronze-badge/">CHAOSS Diversity, Equity, and Inclusion Bronze Badge</a> reflects our continued commitment to creating a diverse, equitable, and inclusive environment. This achievement is a direct recognition of our work in this space, in particular enhancing newcomer experiences within our community.</p>
+        <div class="grid self-center">
+          <img src="assets/CHAOSS-DEI-Bronze-Badge.svg" alt="CHOASS DEI Bronze Badge" width="786" height="156" loading="lazy" class="w-[50dvmin]" />
+        </div>
+        <blockquote class="mt-[5vh]">
+          <p>“The CHAOSS DEI Bronze Badge embodies Django’s ongoing efforts to ensure everyone feels seen, heard, and valued. Django’s commitment to diversity isn’t just symbolic—it’s practical, visible, and impactful. I’m honored to contribute to such an inclusive and forward-thinking community.”</p>
+          <p>— <a href="https://cm.linkedin.com/in/ariane-djeupang">Ariane Djeupang</a>, DjangoCon US Marketing Co-Chair 2025</p>
+        </blockquote>
+        <blockquote>
+          <p>“Django earning the CHAOSS DEI Bronze Badge reminds me of why I’m proud to be a Djangonaut. It shows that our community doesn’t just talk about diversity and inclusion—we intentionally build it into the fabric of everything we do. Django is sending a clear message to newcomers and longtime contributors alike: your voice matters here. It’s a meaningful milestone that reflects our ongoing commitment to equity, and inclusion.”</p>
+          <p>– <a href="https://www.linkedin.com/in/keanyaphelps">Keanya Phelps</a> DjangoCon US Conference Chair 2025</p>
+        </blockquote>
+      </section>
+
+      <section class="slide">
+        <h2>Django Fellows highlights</h2>
+        <p>The <a href="https://www.djangoproject.com/fundraising/#fellowship-program">Django Fellowship program</a> is integral to maintaining Django&#39;s health, security, and continued innovation. As Fellows, we cover essential daily maintenance and support tasks. Our two Fellows’ role encompasses managing security reports, reviewing pull requests, triaging tickets, mentoring new contributors, and ensuring timely releases.</p>
+        <figure>
+          <img src="assets/photos/people/afi_sarah_natalia_velda.jpg" alt="Four women smiling at the camera, inside a conference room with a screen behind them." width="800" height="533" loading="lazy">
+          <figcaption>Abigail Afi Gbadago, <a href="https://www.djangoproject.com/fundraising/#who-are-the-django-fellows">our Fellows Sarah and Natalia</a>, and Velda Kiara</figcaption>
+        </figure>
+        <p>Our work often involves behind-the-scenes tasks that keep Django running smoothly—tasks that need constant attention beyond what volunteer efforts alone can consistently provide. This includes:</p>
+        <ul>
+          <li>Handling and responding promptly to security reports.</li>
+          <li>Triaging tickets on Trac to quickly address and categorize issues.</li>
+          <li>Reviewing and merging pull requests, ensuring contributions meet Django&#39;s high standards.</li>
+          <li>Issuing regular monthly releases and urgent security updates when necessary.</li>
+          <li>Fixing severe bugs and managing their backporting to stable versions of Django.</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h3>2024 Fellow activities</h3>
+        <p>Throughout the year, we&#39;ve also spent time supporting new contributors through initiatives that significantly enhance community engagement:</p>
+        <ul>
+        <li><a href="https://djangonaut.space/">Djangonaut Space</a>: Encouraging and supporting new Django contributors to become active and confident participants.</li>
+        <li><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a>: Guiding students through significant projects that improve Django’s capabilities and features.</li>
+        <li>Actively supporting the community’s efforts on accessibility, helping to ensure Django remains inclusive and accessible to all users.</li>
+        </ul>
+        <p class="mt-[5vh]">If you want to learn more about our work, here are some of our recent talks highlighting what we have been part of in 2024:</p>
+        <div class="mt-[5vh] grid lg:grid-cols-3 gap-4">
+          <figure class="hero-picture hero-picture--small">
+            <img
+              src="assets/videos/djangocon_us_2024_natalia_reYtEsqwIOU.webp"
+              alt="DjangoCon US 2024 - Keynote - The Fellowship of the Pony"
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://2024.djangocon.us/talks/keynote-wednesday/">Keynote - The Fellowship of the Pony</a>
+            </figcaption>
+          </figure>
+
+          <figure class="hero-picture hero-picture--small hero-picture--odd">
+            <img
+              src="assets/videos/djangochat_natalia_and_sarah.webp"
+              alt="Django Chat - Django Fellows - Natalia Bidart & Sarah Boyce"
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://djangochat.com/episodes/django-fellows-natalia-bidart-sarah-boyce">Django Fellows - Natalia Bidart & Sarah Boyce</a>
+            </figcaption>
+          </figure>
+          <figure class="hero-picture hero-picture--small">
+            <img
+              src="assets/videos/djangocon_us_2024_sarah_ OEskMO_cvpw.webp"
+              alt="DjangoCon US 2024 - Hidden gems of Django 5.x"
+              width="480"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>
+              <a href="https://2024.djangocon.us/talks/hidden-gems-of-django-5-x/">Hidden gems of Django 5.x</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="mt-[5vh] grid sm:flex items-center gap-4">
+            <p>Your continued <a href="https://www.djangoproject.com/fundraising/">support through donations</a> is essential, directly sustaining the Fellowship program and helping us keep Django robust, inclusive, and welcoming for all contributors. Thank&nbsp;you for being an integral part of this journey!</p>
+            <img class="aspect-square h-auto! w-32 mx-auto" src="assets/django-heart.svg" alt="Django Girls pixelated heart" width="32" height="32">
+          </div>
+      </section>
+
+      <section class="slide">
+        <h2>Financial overview</h2>
+        <figure>
+          <img class="border-0!" src="assets/graphs/dsf-2024-income-expenses-sankey.svg" width="1200" height="800" loading="lazy" alt="Sankey chart">
+          <figcaption class="start-0">Foundation income and expenses Sankey chart</figcaption>
+        </figure>
+        <p class="credit">Chart built with <a href="https://sankeymatic.com/">SankeyMATIC</a></p>
+      </section>
+
+      <section class="slide">
+        <h3>Grants around the world</h3>
+      </section>
+
+      <section class="slide">
+        <h2>Our plans in 2025</h2>
+      </section>
+
+      <section class="slide">
+        <h3>2025 fundraising plans</h3>
+        <p>In 2024, we set a fundraising goal of $200,000 — and thanks to your generosity, we made it happen! Those contributions, big or small, directly power Django’s continued success. Looking ahead, we think there is room for us to do more, with more resources. Imagine what we could achieve with enhanced support:</p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="col-span-2">
+            <ul>
+              <li><strong>If we could raise $500,000, we could:</strong><ul>
+                  <li>Hire an Executive Director to strategically lead our operations and dramatically expand our capabilities.</li>
+                  <li>Hire a new Django Fellow</li>
+                </ul>
+              </li>
+              <li><strong>If we could raise $750,000, we could:</strong><ul>
+                  <li>Double our Fellowship program, increasing support for Django’s core development, community mentorship, and feature enhancements.</li>
+                  <li>Launch dedicated feature grants. For enhancements like built-in WebAuthn, improved API capabilities, or a modernized admin.</li>
+                </ul>
+              </li>
+              <li><strong>If we could raise $1,000,000, we could:</strong><ul>
+                  <li>Significantly increase grants to events and community projects like Django Girls, to broaden our impact.</li>
+                  <li>Introduce hardship grants, inspired by initiatives like the Rust Foundation’s program, directly supporting community members facing financial challenges.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <figure class="hero-picture hero-picture--small">
+              <img
+                src="assets/videos/djangocon_us_2024_jacob_lsJKBbjppVg.webp"
+                alt="DjangoCon US 2024 - If We Had $1,000,000 - Jacob Kaplan-Moss"
+                width="480"
+                height="360"
+                loading="lazy"
+              />
+              <figcaption>
+                <a href="https://2024.djangocon.us/talks/hidden-gems-of-django-5-x/">If We Had $1,000,000</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <p>Your donation today fuels these aspirations and helps build a vibrant, sustainable future for Django. <a href="https://www.djangoproject.com/fundraising/">Join us</a> in shaping what&#39;s possible!</p>
+        <div class="grid">
+          <p class="flex gap-4"><a class="button button--primary" href="https://www.djangoproject.com/fundraising/"><span>Donate now</span></a><a class="button button--secondary" href="https://www.djangoproject.com/foundation/corporate-membership/join/"><span>Become a Corporate Member</span></a></p>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h3>6.x Steering Council</h3>
+        <p>The <a href="https://www.djangoproject.com/weblog/2024/dec/18/django-6x-steering-council-election-results/">newly elected Steering Council</a> is dedicated to renewing Django’s technical governance, providing proactive leadership, and setting a clear direction for the framework.</p>
+        <p>We will prioritize addressing recent governance challenges by clearly defining the Steering Council’s role, and how and when we get involved with discussions and decisions. We want our more proactive approach to inspire confidence and clarity in Django&#39;s technical decisions, in particular when it comes to adding or removing features.</p>
+        <p>We also recognize the current challenges contributors face when proposing changes. We will strive to make the process less intimidating and less taxing for everyone involved, encouraging a broader and more diverse set of contributors to engage with Django.</p>
+        <p>Community and mentorship are crucial for the sustainability of Django. We can help by actively bridging the gap between new contributors and long-term maintainers by fostering structured mentorship programs, enhancing documentation, and engaging with contributors at all levels of experience.</p>
+        <p>We also plan to work on:</p>
+        <ul>
+        <li><strong>Technical health:</strong> balancing improvement and innovation against the need to maintain Django’s reliability and stability.</li>
+        <li><strong>Supporting the third-party Ecosystem:</strong> acknowledging their critical role in Django’s ecosystem, improving the visibility and discoverability of third-party applications.</li>
+        <li><strong>Roadmap and feature requests clarity:</strong> Actively championing community-driven feature requests to guide development and provide clarity for potential contributors, potentially with a formal project roadmap.</li>
+        </ul>
+        <p>Through these focused initiatives, the Steering Council will ensure Django remains a vibrant, accessible, and future-ready framework.</p>
+        <div class="mt-[5vh] grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/frank_wiles_headshot-300.jpg" alt="Frank"><p>Frank Wiles</p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/carlton_gibson_github.jpg" alt="Carlton"><p>Carlton Gibson</p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/tim_schilling_bluesky.jpg" alt="Tim"><p>Tim Schilling</p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/emma_delescolle_mastodon.jpg" alt="Emma"><p>Emma Delescolle</p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/lily-acorn-github.jpg" alt="Lily"><p>Lily Foote</p></div>
+        </div>
+      </section>
+
+      <section class="slide slide--2col slide--2col-wide">
+        <div><h3>2025 Board statement</h3>
+        <p>The <a href="https://www.djangoproject.com/foundation/#board">2025 Board</a> is committed to sustaining and evolving Django as a robust, innovative, and inclusive web framework. Our key areas of focus this year are:</p>
+        <ul>
+          <li><strong>Governance reform:</strong> Addressing the recent challenges within Django’s technical leadership, we will improve our decision-making processes, and transparency. This will include revisions of the Foundation’s bylaws.</li>
+          <li><strong>Executive leadership:</strong> Actively pursue the creation of a new Executive Director role to enhance organizational stability, streamline daily operations, and boost our fundraising capabilities.</li>
+          <li><strong>Working groups:</strong> Actively addressing gaps in our current volunteer capabilities, and expanding upon existing groups with newly-created ones.</li>
+          <li><strong>Global outreach:</strong> Expanding Django&#39;s visibility and fostering deeper connections through partnerships, governance reform, and growing our Members.</li>
+          <li><strong>Sustainability</strong>: Better processes around the fundamentals of a non-profit organization – fundraising, onboarding, documentation, transparency.</li>
+        </ul>
+        <p>Together, these priorities will drive Django’s continued growth and ensure its position as a leading community-driven open-source project.</p>
+        <div class="mt-[5vh] grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/thibaud-heart-web.jpg" alt="Thibaud"><p>Thibaud Colas <br><strong>President</strong></p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/sarah_abderemane_linkedin.jpg" alt="Sarah"><p>Sarah Abderemane <br><strong>Vice President</strong></p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/tom_carrick_linkedin.jpg" alt="Tom"><p>Tom Carrick <br><strong>Secretary</strong></p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/jacob_kaplan-moss_github.jpg" alt="Jacob"><p>Jacob Kaplan-Moss <br><strong>Treasurer</strong></p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/abigail_afi_gbadago_linkedin.jpg" alt="Abigail"><p>Abigail Afi Gbadago <br><strong>Board Member</strong></p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/jeff_triplett_linkedin.jpg" alt="Jeff"><p>Jeff Triplett <br><strong>Board Member</strong></p></div>
+          <div class="profile"><img width="80" height="80" loading="lazy" src="assets/photos/people/paulo_melchiorre_linkedin.jpg" alt="Paolo"><p>Paolo Melchiorre <br><strong>Board Member</strong></p></div>
+          <div class="profile xl:col-span-2"><img width="80" height="80" loading="lazy" src="assets/photos/people/catherine_holmes_linkedin.jpg" alt="Catherine"><p>With support from <br>Catherine Holmes <br><strong>Assistant</strong></p></div>
+        </div>
+      </div>
+      <div class="p-0!">
+        <img class="bg mix-blend-multiply" src="assets/photos/laptop-conference-stickers-vertical.webp" alt="Laptop with stickers for DjangoCon US 2024, DjangoCon Europe 2024, Django London, Djangonaut Space, Django Girls" loading="lazy" />
+      </div>
+      </section>
+
       <section class="slide slide--tri-radial">
         <figure class="hero-picture">
           <img
-            src="assets/photos/events/Django-Day-CPH-2024-group-photo.webp"
+            src="assets/photos/events/Django-Day-CPH-2024-group-photo.jpg"
             alt="Group photo of Django Day Copenhagen 2024 attendees"
-            width="390"
-            height="260"
-            class="aspect-[3/2]"
+            width="780"
+            height="520"
             loading="lazy"
+            class="aspect-[3/2]"
           />
           <figcaption>
             <a href="https://2024.djangoday.dk/">Django Day Copenhagen 2024</a>
           </figcaption>
         </figure>
-      </section>
-
-      <section class="slide">
-        <h2>Work in progress</h2>
+        <figure class="hero-picture">
+          <img
+            src="assets/photos/events/django-london-2024-quizz.jpg"
+            alt="Django London quizz with Adam presenting, and meetup audience in the foreground"
+            width="800"
+            height="532"
+            class="aspect-[3/2]"
+            loading="lazy"
+          />
+          <figcaption>
+            <a href="https://www.meetup.com/djangolondon/">Django London December 2024</a>
+          </figcaption>
+        </figure>
       </section>
     </main>
     <footer>
       <p class="copyright">
-        © 2005-2025
-        <a href="https://www.djangoproject.com/foundation/">
-          Django Software Foundation</a
-        >
-        and individual contributors. Django is a
-        <a href="https://www.djangoproject.com/trademarks/"
-          >registered trademark</a
-        >
-        of the Django Software Foundation.
+        © 2005-2025 <a href="https://www.djangoproject.com/foundation/">Django Software Foundation</a> and individual contributors. Django is a <a href="https://www.djangoproject.com/trademarks/">registered trademark</a> of the Django Software Foundation.
       </p>
     </footer>
   </body>
