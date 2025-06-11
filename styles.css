@@ -573,7 +573,7 @@
     inset-inline-start: 0;
     --top: calc(var(--safe-area) + 0.6em);
     padding-block: var(--top);
-    padding-inline: calc(var(--safe-area) * 0.25);
+    padding-inline: calc(var(--safe-area) * 0.3);
     font-size: 1.6em;
     text-decoration: none;
 
