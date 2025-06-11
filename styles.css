@@ -80,7 +80,7 @@
     font-weight: var(--font-weight-semibold);
     text-wrap: balance;
     font-family: var(--font-dtl-prokyon);
-    margin-top: 1em;
+    margin-top: var(--safe-area);
     margin-bottom: 1em;
 
     .slide--cover & {
@@ -94,7 +94,7 @@
     font-weight: var(--font-weight-semibold);
     font-family: var(--font-dtl-prokyon);
     text-wrap: balance;
-    margin-top: 1em;
+    margin-top: var(--safe-area);
     margin-bottom: 1em;
   }
 
@@ -536,10 +536,12 @@
     }
   }
 
+  /* Figure with label underneath. */
   .project-metric {
     @apply bg-official-green text-official-white border-transparent border-2 p-6;
   }
 
+  /* Person profile picture, name, title. */
   .profile {
     display: flex;
     gap: 0.5rem;
@@ -551,6 +553,7 @@
     }
   }
 
+  /* Corporate sponsor logo wrapped with a link. */
   .sponsor {
     @apply flex flex-col justify-center;
 
@@ -563,6 +566,31 @@
     }
   }
 
+  /* Heading anchor link. */
+  .anchor {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    --top: calc(var(--safe-area) + 0.6em);
+    padding-block: var(--top);
+    padding-inline: calc(var(--safe-area) * 0.25);
+    font-size: 1.6em;
+    text-decoration: none;
+
+    &:not(:hover, :focus) {
+      visibility: hidden;
+    }
+
+    &:has(+ :is(h2)) {
+      --top: calc(var(--safe-area) * 2 + 0.3em);
+    }
+
+    &:has(+ :is(h2, h3):hover) {
+      visibility: visible;
+    }
+  }
+
+  /* A call-to-action button to use sparingly. */
   .button {
     display: inline-block;
     text-decoration: none;
@@ -588,16 +616,10 @@
   }
 }
 
+/* For hero pictures to reposition on hover / focus. */
 @keyframes slideDown {
   0% {
     transform: translate(var(--slide-start-x), var(--slide-start-y)) rotate(0);
-  }
-  50% {
-    transform: translate(
-        calc(var(--slide-start-x) + var(--slide-end-x) / 2),
-        calc(var(--slide-start-y) + var(--slide-end-y) / 2)
-      )
-      rotate(calc(-1 * var(--rest-angle) / 4));
   }
   100% {
     transform: translate(var(--slide-end-x), var(--slide-end-y))
@@ -622,16 +644,3 @@ img[src*="europython_2024_dsf_badge"] {
   background-color: black;
 }
 
-@keyframes scale-a-lil {
-  from {
-    scale: 0.5;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  img.scale-a-lil {
-    animation: scale-a-lil linear both;
-    animation-timeline: view();
-    animation-range: 20vh 70vh;
-  }
-}
