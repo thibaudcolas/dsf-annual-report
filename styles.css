@@ -578,7 +578,7 @@
     text-decoration: none;
 
     &:not(:hover, :focus) {
-      visibility: hidden;
+      opacity: 0;
     }
 
     &:has(+ :is(h2)) {
@@ -586,7 +586,7 @@
     }
 
     &:has(+ :is(h2, h3):hover) {
-      visibility: visible;
+      opacity: 1;
     }
   }
 
