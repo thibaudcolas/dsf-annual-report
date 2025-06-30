@@ -36,12 +36,9 @@
   body {
     --light-dark: light-dark(
       color-mix(in oklch, CanvasText 10%, Canvas),
-      color-mix(in oklch, CanvasText 20%, Canvas)
+      color-mix(in oklch, CanvasText 15%, Canvas)
     );
-    --dark-light: light-dark(
-      color-mix(in oklch, Canvas 10%, CanvasText),
-      color-mix(in oklch, Canvas 5%, CanvasText)
-    );
+    --dark-light: color-mix(in oklch, Canvas 10%, CanvasText);
     color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
     --safe-area: 3vmin;
     font-size: clamp(1rem, calc(0.65dvmax + 1rem), 3dvmin);
@@ -90,7 +87,7 @@
     margin-bottom: 1em;
 
     .slide--cover & {
-      font-size: 4dvmin;
+      font-size: clamp(2rem, 4dvmin, 6rem);
     }
   }
 
