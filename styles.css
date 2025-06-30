@@ -5,7 +5,7 @@
   --radius-*: initial;
   --shadow-*: initial;
   --drop-shadow-*: initial;
-    --blur-*: initial;
+  --blur-*: initial;
   --perspective-*: initial;
   --font-dtl-prokyon: "DTLProkyon", ui-sans-serif;
   --color-official-green: #092e20;
@@ -34,8 +34,14 @@
 
 @layer base {
   body {
-    --light-dark: light-dark(color-mix(in oklch, CanvasText 10%, Canvas), color-mix(in oklch, CanvasText 20%, Canvas));
-    --dark-light: light-dark(color-mix(in oklch, Canvas 10%, CanvasText), color-mix(in oklch, Canvas 5%, CanvasText));
+    --light-dark: light-dark(
+      color-mix(in oklch, CanvasText 10%, Canvas),
+      color-mix(in oklch, CanvasText 20%, Canvas)
+    );
+    --dark-light: light-dark(
+      color-mix(in oklch, Canvas 10%, CanvasText),
+      color-mix(in oklch, Canvas 5%, CanvasText)
+    );
     color: color-mix(in oklch, var(--light-dark) 20%, CanvasText);
     --safe-area: 3vmin;
     font-size: clamp(1rem, calc(0.65dvmax + 1rem), 3dvmin);
@@ -231,7 +237,6 @@
       img {
         width: auto;
         max-height: 55vh;
-
       }
 
       &:not(:only-child) {
@@ -256,18 +261,32 @@
     }
 
     &.slide--cover {
-      color: light-dark(var(--color-official-green), var(--color-official-white));
+      color: light-dark(
+        var(--color-official-green),
+        var(--color-official-white)
+      );
       background-color: Canvas;
-      background-image: radial-gradient(
+      background-image:
+        radial-gradient(
           55.51% 55.51% at 50% 56.73%,
           light-dark(#def6eaee, #125e41aa) 0%,
           light-dark(#89e7c3ee, color-mix(in oklch, #2acd8faa, Canvas 60%)) 65%
         ),
         url("assets/bg/left-cloud.svg"), url("assets/bg/right-cloud.svg"),
         url("assets/bg/right-cloud.svg"), url("assets/bg/left-cloud.svg");
-      background-position: 0 0, -16vw -11vh, -20vw 64vh, 88vw -12vh, 72vw 55vh;
+      background-position:
+        0 0,
+        -16vw -11vh,
+        -20vw 64vh,
+        88vw -12vh,
+        72vw 55vh;
       background-repeat: no-repeat;
-      background-size: cover, 40vw 40vh, 60vw 56vh, 40vw 40vh, 48vw 53vh;
+      background-size:
+        cover,
+        40vw 40vh,
+        60vw 56vh,
+        40vw 40vh,
+        48vw 53vh;
 
       img {
         width: 30vw;
@@ -275,7 +294,8 @@
     }
 
     &.slide--chaoss-dei-badge {
-      background: radial-gradient(
+      background:
+        radial-gradient(
           50% 50% at 50% 50%,
           rgba(255, 107, 160, 0.3) 0%,
           rgba(255, 255, 255, 0) 62.81%
@@ -297,16 +317,31 @@
         ),
         url("assets/bg/left-cloud.svg"), url("assets/bg/right-cloud.svg"),
         url("assets/bg/right-cloud.svg"), url("assets/bg/left-cloud.svg");
-      background-position: -50vw 0, 0vw 0, 50vw 0, 0 0, -16vw -11vh, -20vw 64vh,
-        88vw -12vh, 72vw 55vh;
+      background-position:
+        -50vw 0,
+        0vw 0,
+        50vw 0,
+        0 0,
+        -16vw -11vh,
+        -20vw 64vh,
+        88vw -12vh,
+        72vw 55vh;
       background-repeat: no-repeat;
-      background-size: cover, cover, cover, cover, 40vw 40vh, 60vw 56vh,
-        40vw 40vh, 48vw 53vh;
+      background-size:
+        cover,
+        cover,
+        cover,
+        cover,
+        40vw 40vh,
+        60vw 56vh,
+        40vw 40vh,
+        48vw 53vh;
       background-repeat: no-repeat;
     }
 
     &.slide--tri-radial {
-      background: radial-gradient(
+      background:
+        radial-gradient(
           50% 50% at 50% 50%,
           rgba(255, 107, 160, 0.3) 0%,
           rgba(255, 255, 255, 0) 62.81%
@@ -321,7 +356,10 @@
           rgba(94, 184, 148, 0.3) 0%,
           rgba(255, 255, 255, 0) 62.81%
         );
-      background-position: -50vw 0, 0vw 0, 50vw 0;
+      background-position:
+        -50vw 0,
+        0vw 0,
+        50vw 0;
       background-repeat: no-repeat;
     }
 
@@ -419,11 +457,13 @@
   }
 
   .bg-stickers {
-    background: linear-gradient(
-          180deg,
-          var(--color-official-green) 20%,
-          color-mix(in oklch, transparent, var(--color-official-green)) 80%
-        ), url("assets/bg/Django_Day_CPH_2024_stickers.jpg");
+    background:
+      linear-gradient(
+        180deg,
+        var(--color-official-green) 20%,
+        color-mix(in oklch, transparent, var(--color-official-green)) 80%
+      ),
+      url("assets/bg/Django_Day_CPH_2024_stickers.jpg");
   }
 
   /**
@@ -602,7 +642,9 @@
     font-size: 0.8em;
     letter-spacing: 1px;
     border-radius: 8px;
-    transition: background-color .5s, color .5s;
+    transition:
+      background-color 0.5s,
+      color 0.5s;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
     color: white;
 
@@ -629,18 +671,23 @@
 
 /* huevo de Pascua */
 [lang="es"] {
-  cursor:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='24'><text y='50%'>🇪🇸</text></svg>") 16 0, auto;
+  cursor:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='24'><text y='50%'>🇪🇸</text></svg>")
+      16 0,
+    auto;
 }
 
 img[src*="django-heart"] {
-  cursor:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><text y='50%'>✨</text></svg>") 16 0, auto;
+  cursor:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><text y='50%'>✨</text></svg>")
+      16 0,
+    auto;
 }
 
 img[src*="europython_2024_dsf_badge"] {
-  mask-image: url('assets/pony-flying.svg');
+  mask-image: url("assets/pony-flying.svg");
   mask-repeat: no-repeat;
   mask-size: 90%;
   mask-position: center;
   background-color: black;
 }
-
