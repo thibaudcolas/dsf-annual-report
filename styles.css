@@ -685,7 +685,7 @@ img[src*="django-heart"] {
 }
 
 img[src*="europython_2024_dsf_badge"] {
-  mask-image: url("assets/pony-flying.svg");
+  mask-image: url("assets/bg/pony-flying-outline.svg");
   mask-repeat: no-repeat;
   mask-size: 90%;
   mask-position: center;
