@@ -594,6 +594,10 @@
   .sponsor {
     @apply flex flex-col justify-center;
 
+    :has([name="color-scheme"][content="dark"]) & {
+      background-color: var(--color-official-white);
+    }
+
     @media (forced-colors: active) {
       img {
         forced-color-adjust: none;
