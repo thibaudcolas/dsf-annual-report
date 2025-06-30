@@ -5,15 +5,13 @@
 npm run build
 
 sed -i '' \
-  -e 's|assets/fonts/dtl-prokyon.woff2|https://media.djangoproject.com/blog/images/2025/06/dtl-prokyon.woff2|g' \
   -e 's|assets/bg/Django_Day_CPH_2024_stickers.jpg|https://media.djangoproject.com/blog/images/2025/06/Django_Day_CPH_2024_stickers.jpg|g' \
   -e 's|assets/bg/left-cloud.svg|https://media.djangoproject.com/blog/images/2025/06/left-cloud.svg|g' \
   -e 's|assets/bg/right-cloud.svg|https://media.djangoproject.com/blog/images/2025/06/right-cloud.svg|g' \
-  -e 's|assets/pony-flying.svg|https://media.djangoproject.com/blog/images/2025/06/pony-flying.svg|g' \
   output.css
 
 font=$(cat assets/fonts/dtl-prokyon.woff2 | base64)
-sed -i '' -e "s|assets/fonts/dtl-prokyon.woff2|$font|g" output.css
+sed -i '' -e "s|assets/fonts/dtl-prokyon.woff2|data:font/woff2;base64,$font|g" output.css
 
 awk '
 /<link[^>]*rel=["'\'']stylesheet["'\''][^>]*>/ {
