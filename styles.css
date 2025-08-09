@@ -44,9 +44,27 @@
     font-size: clamp(1rem, calc(0.65dvmax + 1rem), 3dvmin);
   }
 
+  .deck {
+    background-color: #111;
+    --safe-area: 1.5vmin;
+    padding: var(--safe-area) 0;
+    font-size: clamp(1rem, calc(0.45dvmax + 1rem), 3dvmin);
+  }
+
   main {
     & > * {
       min-height: 100vh;
+
+      .deck & {
+        min-height: 50vh;
+        border: calc(2 * var(--safe-area)) solid #111;
+      }
+    }
+
+    .deck & {
+      background-color: var(--light-dark);
+      margin: 0 auto;
+      max-width: 1280px;
     }
   }
 
@@ -88,6 +106,12 @@
 
     .slide--cover & {
       font-size: clamp(2rem, 4dvmin, 6rem);
+    }
+
+    .deck & {
+      margin-top: 1rem;
+      margin-bottom: 1em;
+      font-size: clamp(2rem, 2dvmin, 4rem);
     }
   }
 
@@ -155,6 +179,10 @@
       border: 2px solid CanvasText;
       border-inline-start-width: 0.25em;
     }
+
+    .deck & {
+      font-size: 1em;
+    }
   }
 }
 
@@ -164,7 +192,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: var(--safe-area) 4vmin;
+    padding: var(--safe-area) calc(var(--safe-area) * 1.5);
     --hue: oklch(30% 0.4 calc(230 + calc(5 * var(--angle-factor))));
     --bg: color-mix(in oklch, var(--light-dark) 90%, var(--hue));
     --bg2: color-mix(in oklch, var(--bg) 90%, var(--light-dark));
@@ -203,7 +231,7 @@
 
     &:has(h2) {
       --angle-factor: 5 !important;
-      border-top: 4px solid black;
+      border-top: 4px solid #111;
     }
 
     > .slide-footer {
@@ -365,11 +393,11 @@
       padding: 0;
 
       > div:first-child {
-        padding: var(--safe-area) 4vmin;
+        padding: var(--safe-area) calc(var(--safe-area) * 1.5);
       }
 
       > div:nth-child(2) {
-        padding: var(--safe-area) 4vmin;
+        padding: var(--safe-area) calc(var(--safe-area) * 1.5);
       }
 
       @media (min-width: 1024px) {
@@ -575,7 +603,7 @@
 
   /* Figure with label underneath. */
   .project-metric {
-    @apply bg-official-green text-official-white border-transparent border-2 p-6;
+    @apply bg-official-green text-official-white border-transparent border-2 p-5;
   }
 
   /* Person profile picture, name, title. */
@@ -655,6 +683,16 @@
 
     &:has(~ .button) {
       margin-inline-end: 10px;
+    }
+  }
+
+  footer {
+    .deck & {
+      background-color: var(--light-dark);
+      margin: 0 auto;
+      max-width: 1280px;
+      border-inline-start: calc(2 * var(--safe-area)) solid #111;
+      border-inline-end: calc(2 * var(--safe-area)) solid #111;
     }
   }
 }
